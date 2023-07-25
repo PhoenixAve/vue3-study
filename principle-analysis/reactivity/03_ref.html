@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- 使用导入映射表 (Import Maps) 来告诉浏览器如何定位到导入的 vue： -->
+  <!-- <script type="importmap">
+    {
+      "imports": {
+        "vue": "https://unpkg.com/vue@3/dist/vue.esm-browser.js"
+      }
+    }
+  </script> -->
+  <script type="module">
+    // import {reactive, effect} from './node_modules/@vue/reactivity/dist/reactivity.esm-browser.js';
+    import { effect, ref } from './index.js';
+    // import {reactive, effect} from 'vue';
+
+    const price = ref(5000);
+    const count = ref(3);
+    let total = 0
+
+    effect(() => {
+      total = price.value * count.value
+    })
+    console.log(total);
+    
+    price.value = 4000;
+    console.log(total)
+
+    count.value = 1;
+    console.log(total)
+
+  </script>
+</body>
+</html>

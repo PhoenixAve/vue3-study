@@ -1,0 +1,13 @@
+{
+  "name": "vue3-study",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:PhoenixAve/vue3-study.git",
+  "author": "yujingcheng <yujingcheng@meituan.com>",
+  "license": "MIT",
+  "dependencies": {
+    "dexie": "^3.2.2",
+    "indexdbwrapper": "^1.0.4",
+    "vue": "^3.2.36"
+  }
+}
